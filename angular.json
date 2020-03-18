@@ -25,7 +25,7 @@
               "apps/sample-app/src/favicon.ico",
               "apps/sample-app/src/assets"
             ],
-            "styles": ["apps/sample-app/src/styles.scss"],
+            "styles": ["apps/sample-app/src/styles.scss", "apps/sample-app/src/tailwind.scss"],
             "scripts": []
           },
           "configurations": {
@@ -93,6 +93,14 @@
             "tsConfig": "apps/sample-app/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/sample-app/src/test-setup.ts"
+          }
+        },
+        "tailwind": {
+          "builder": "@nx-plugins/ng-tailwind:execute",
+          "options": {
+            "watch": false,
+            "configPath": "apps/sample-app/ng-tailwind.js",
+            "purge": false
           }
         }
       }
